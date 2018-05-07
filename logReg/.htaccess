@@ -1,0 +1,7 @@
+# This file prevents that your .php view files are accessed directly from the outside
+<Files ~ "\.(htaccess|php)$">
+SetEnvIfNoCase X-Requested-With XMLHttpRequest ajax
+Order Deny,Allow
+Deny from all
+Allow from env=ajax
+</Files>
